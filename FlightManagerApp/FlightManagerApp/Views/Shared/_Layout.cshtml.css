@@ -6,7 +6,6 @@ html {
 }
 
 body {
-    background: #222D32;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -54,4 +53,22 @@ button.accept-policy {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+
+footer .container {
+    color: black;
+}
+
+.container-fluid {
+   
+}
+
+.navbar {
+    padding: 2rem 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3785889355742297) 74%, rgba(205,193,255,1) 100%);
+}
+
+.navbar, navbar-expand-sm, navbar-toggleable-sm, navbar-light, mb-3 {
+    box-shadow: none;
 }

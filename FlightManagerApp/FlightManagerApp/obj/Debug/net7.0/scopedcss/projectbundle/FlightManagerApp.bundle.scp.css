@@ -28,20 +28,20 @@
     font-size: 14px;
 }
 
-.form button[b-wn6j9bcgtj] {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-}
+    .form button[b-wn6j9bcgtj] {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #705dbe;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+    }
 
 .form button:hover[b-wn6j9bcgtj], .form button:active[b-wn6j9bcgtj], .form button:focus[b-wn6j9bcgtj] {
     background: #43A047;
@@ -119,7 +119,6 @@ html[b-pyjl9ugnzs] {
 }
 
 body[b-pyjl9ugnzs] {
-    background: #222D32;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -167,4 +166,22 @@ button.accept-policy[b-pyjl9ugnzs] {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+
+footer .container[b-pyjl9ugnzs] {
+    color: black;
+}
+
+.container-fluid[b-pyjl9ugnzs] {
+   
+}
+
+.navbar[b-pyjl9ugnzs] {
+    padding: 2rem 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3785889355742297) 74%, rgba(205,193,255,1) 100%);
+}
+
+.navbar[b-pyjl9ugnzs], navbar-expand-sm[b-pyjl9ugnzs], navbar-toggleable-sm[b-pyjl9ugnzs], navbar-light[b-pyjl9ugnzs], mb-3[b-pyjl9ugnzs] {
+    box-shadow: none;
 }
