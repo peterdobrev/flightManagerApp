@@ -1,4 +1,4 @@
-﻿using FlightManagerApp.Data;
+﻿using FlightManagerApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightManagerApp
@@ -14,7 +14,7 @@ namespace FlightManagerApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<FlightManagerDBContext>(options =>
+            services.AddDbContext<FlightManagerDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("FlightManagerDB")));
 
             services.AddControllersWithViews();
