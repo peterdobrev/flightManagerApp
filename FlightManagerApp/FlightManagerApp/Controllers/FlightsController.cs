@@ -65,7 +65,7 @@ namespace FlightManagerApp.Controllers
             }
             return View(flight);
         }
-
+        
         // GET: Flights/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
