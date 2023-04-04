@@ -10,12 +10,12 @@ CREATE TABLE dbo.Reservation (
     FirstName VARCHAR(50) NOT NULL,
     MiddleName VARCHAR(50) NOT NULL,
     LastName VARCHAR(50) NOT NULL,
-    EGN CHAR(10) NOT NULL,
-    PhoneNumber VARCHAR(20) NOT NULL,
+    EGN CHAR(10) NOT NULL UNIQUE,
+	Email VARCHAR(50),
+    PhoneNumber VARCHAR(20) NOT NULL UNIQUE,
     Nationality VARCHAR(50) NOT NULL,
     TicketType VARCHAR(20) NOT NULL,
     FlightID INT NOT NULL,
-    UserID INT NOT NULL,
     FOREIGN KEY (FlightID) REFERENCES Flight(FlightID), 
 );
 GO
