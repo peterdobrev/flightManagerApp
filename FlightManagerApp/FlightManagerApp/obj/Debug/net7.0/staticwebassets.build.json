@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sX7ERFUjO0rtFeszKyZLZrVOKpPGFfCcopVGhkmj5L0=",
+  "Hash": "Lk0bxD28OFL3/3xnQk6yYz17RKuS+M7fk5Fayf+vmOc=",
   "Source": "FlightManagerApp",
   "BasePath": "_content/FlightManagerApp",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\FlightManagerApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\airplane-nose.png",
+      "SourceId": "FlightManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\",
+      "BasePath": "_content/FlightManagerApp",
+      "RelativePath": "css/photos/airplane-nose.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\photos\\airplane-nose.png"
+    },
+    {
+      "Identity": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\airplane-tail.png",
+      "SourceId": "FlightManagerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\",
+      "BasePath": "_content/FlightManagerApp",
+      "RelativePath": "css/photos/airplane-tail.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\photos\\airplane-tail.png"
     },
     {
       "Identity": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\site.css",

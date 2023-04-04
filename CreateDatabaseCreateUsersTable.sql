@@ -33,5 +33,7 @@ CREATE TABLE [User] (
 );
 GO
 
+TRUNCATE TABLE [USER];
+
 INSERT INTO [User] (Username, Password, Email, FirstName, LastName, EGN, Address, PhoneNumber, Role)
 VALUES ('admin', 'admin', 'admin@admin.com', 'Admin', 'Admin', '0000000000', 'Admin', '0000000000', 'admin');

@@ -64,7 +64,7 @@ footer .container {
 }
 
 .navbar {
-    padding: 2rem 0;
+    padding: 2rem 2rem;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3785889355742297) 74%, rgba(205,193,255,1) 100%);
 }

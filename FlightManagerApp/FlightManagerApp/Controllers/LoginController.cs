@@ -1,12 +1,46 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FlightManagerApp.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlightManagerApp.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly FlightManagerDbContext _dbContext;
+
+        public LoginController(FlightManagerDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            if(HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return View();
+            }
+            else return RedirectToAction("Index","Home");
+        }
+
+        [HttpPost]
+        public IActionResult Login(string username, string password)
+        {
+            // Check if the username and password match a user in the database
+            var user = _dbContext.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+            if (user != null)
+            {
+                // If the user is found, set a session variable to indicate that the user is authenticated
+                HttpContext.Session.SetString("IsAuthenticated", "true");
+
+                // Redirect the user to the Home/Index action
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return View("Index");
+            }
         }
     }
 }

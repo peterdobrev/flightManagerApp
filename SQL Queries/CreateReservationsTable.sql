@@ -19,3 +19,5 @@ CREATE TABLE dbo.Reservation (
     FOREIGN KEY (FlightID) REFERENCES Flight(FlightID), 
 );
 GO
+
+

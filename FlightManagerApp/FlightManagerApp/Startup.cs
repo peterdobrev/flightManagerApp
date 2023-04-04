@@ -1,4 +1,5 @@
 ﻿using FlightManagerApp.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightManagerApp
@@ -18,6 +19,10 @@ namespace FlightManagerApp
                 options.UseSqlServer(Configuration.GetConnectionString("FlightManagerDB")));
 
             services.AddControllersWithViews();
+
+            services.AddSession();
+
+
 
             // Other service registrations
         }
@@ -39,6 +44,8 @@ namespace FlightManagerApp
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseSession();
+
 
             app.UseEndpoints(endpoints =>
             {

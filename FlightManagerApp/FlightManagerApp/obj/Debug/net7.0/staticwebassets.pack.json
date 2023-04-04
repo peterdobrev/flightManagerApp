@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\FlightManagerApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\airplane-nose.png",
+      "PackagePath": "staticwebassets\\css\\photos\\airplane-nose.png"
+    },
+    {
+      "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\airplane-tail.png",
+      "PackagePath": "staticwebassets\\css\\photos\\airplane-tail.png"
+    },
+    {
       "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
