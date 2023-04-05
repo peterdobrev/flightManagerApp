@@ -21,7 +21,11 @@ namespace FlightManagerApp.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-              return _context.Users != null ? 
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true" && HttpContext.Session.GetString("IsAdmin") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return _context.Users != null ? 
                           View(await _context.Users.ToListAsync()) :
                           Problem("Entity set 'FlightManagerDbContext.Users'  is null.");
         }
@@ -29,6 +33,10 @@ namespace FlightManagerApp.Controllers
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true" && HttpContext.Session.GetString("IsAdmin") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Users == null)
             {
                 return NotFound();
@@ -47,6 +55,10 @@ namespace FlightManagerApp.Controllers
         // GET: Users/Create
         public IActionResult Create()
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true" && HttpContext.Session.GetString("IsAdmin") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
@@ -69,6 +81,10 @@ namespace FlightManagerApp.Controllers
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true" && HttpContext.Session.GetString("IsAdmin") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Users == null)
             {
                 return NotFound();
@@ -120,6 +136,10 @@ namespace FlightManagerApp.Controllers
         // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true" && HttpContext.Session.GetString("IsAdmin") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Users == null)
             {
                 return NotFound();
