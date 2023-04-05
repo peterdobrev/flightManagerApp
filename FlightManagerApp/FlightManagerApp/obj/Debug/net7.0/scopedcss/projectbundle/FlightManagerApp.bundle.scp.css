@@ -1,3 +1,8 @@
+/* _content/FlightManagerApp/Views/Flights/Index.cshtml.rz.scp.css */
+.pages[b-vgygmei1gv]{
+    display:flex;
+    justify-content:space-between;
+}
 /* _content/FlightManagerApp/Views/Home/Index.cshtml.rz.scp.css */
 .main_container[b-u8mzjbkvyi] {
     background-color: #6C63FF;
@@ -115,6 +120,11 @@ body[b-wn6j9bcgtj] {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+/* _content/FlightManagerApp/Views/Reservations/Index.cshtml.rz.scp.css */
+.pages[b-w81o5co1wu] {
+    display: flex;
+    justify-content: space-between;
 }
 /* _content/FlightManagerApp/Views/Shared/_FlightReservation.cshtml.rz.scp.css */
 .input-container[b-g6w6jqet8z]{
@@ -328,4 +338,9 @@ footer .container[b-pyjl9ugnzs] {
     .img[b-mdss1rgzld] {
         visibility: collapse;
     }
+}
+/* _content/FlightManagerApp/Views/Users/Index.cshtml.rz.scp.css */
+.pages[b-wvzo3xyxkd] {
+    display: flex;
+    justify-content: space-between;
 }
