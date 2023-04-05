@@ -21,8 +21,7 @@ namespace FlightManagerApp
             services.AddControllersWithViews();
 
             services.AddSession();
-
-
+            services.AddHttpContextAccessor();
 
             // Other service registrations
         }
