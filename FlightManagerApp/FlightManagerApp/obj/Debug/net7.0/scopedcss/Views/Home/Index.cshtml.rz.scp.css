@@ -11,6 +11,14 @@
     color: wheat;
 }
 
+.main_container[b-u8mzjbkvyi]{
+    overflow: auto;
+}
+
+    .main_container[b-u8mzjbkvyi]::-webkit-scrollbar {
+        display: none;
+    }
+
 .data-row[b-u8mzjbkvyi] {
     transition: background-color 0.2s ease-in-out;
 }
@@ -50,6 +58,6 @@
     width:20%;
 }
 
-#partialZone[b-u8mzjbkvyi] {
+.partialZone[b-u8mzjbkvyi] {
     background-color: #FED66B;
 }

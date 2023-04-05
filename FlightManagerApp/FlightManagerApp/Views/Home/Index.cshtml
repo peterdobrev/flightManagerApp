@@ -56,7 +56,7 @@
                                 @((item.ArrivalDateTime - item.DepartureDateTime).ToString(@"hh\:mm")) Hours
                             </div>
                         </div>
-                            <div id="partialZone">
+                            <div class="partialZone">
                                 
                             </div>
                     }
@@ -67,21 +67,30 @@
     <script>
         let dataRows = document.querySelectorAll(".data-row");
 
+        let partialZones = document.querySelectorAll(".partialZone");
+        let isPartialZoneDisplayed = false;
+
         $(function () {
-            dataRows.forEach((row) => {
+            dataRows.forEach((row, index) => {
                 row.addEventListener("click", (e) => {
-                    var flightId = 1; // Replace with the actual flight ID
-                    $.ajax({
-                        type: 'GET',
-                        url: '/Reservations/PartialCreate',
-                        data: { flightId: flightId },
-                        success: function (result) {
-                            $('#partialZone').html(result);
-                        },
-                        error: function (xhr, status, error) {
-                            console.log(xhr.responseText);
-                        }
-                    });
+                    if (!isPartialZoneDisplayed) {
+                        var flightId = 1; // Replace with the actual flight ID
+                        $.ajax({
+                            type: 'GET',
+                            url: '/Reservations/PartialCreate',
+                            data: { flightId: flightId },
+                            success: function (result) {
+                                $(partialZones[index]).html(result).show();
+                                isPartialZoneDisplayed = true;
+                            },
+                            error: function (xhr, status, error) {
+                                console.log(xhr.responseText);
+                            }
+                        });
+                    } else {
+                        $(partialZones[index]).hide();
+                        isPartialZoneDisplayed = false;
+                    }
                 });
             });
         });

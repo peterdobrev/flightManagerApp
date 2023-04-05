@@ -12,6 +12,14 @@
     color: wheat;
 }
 
+.main_container[b-u8mzjbkvyi]{
+    overflow: auto;
+}
+
+    .main_container[b-u8mzjbkvyi]::-webkit-scrollbar {
+        display: none;
+    }
+
 .data-row[b-u8mzjbkvyi] {
     transition: background-color 0.2s ease-in-out;
 }
@@ -51,7 +59,7 @@
     width:20%;
 }
 
-#partialZone[b-u8mzjbkvyi] {
+.partialZone[b-u8mzjbkvyi] {
     background-color: #FED66B;
 }
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
@@ -111,6 +119,7 @@ body[b-wn6j9bcgtj] {
 /* _content/FlightManagerApp/Views/Shared/_FlightReservation.cshtml.rz.scp.css */
 .input-container[b-g6w6jqet8z]{
     display: flex;
+    border-radius: 50px;
 }
 
 .left[b-g6w6jqet8z]{

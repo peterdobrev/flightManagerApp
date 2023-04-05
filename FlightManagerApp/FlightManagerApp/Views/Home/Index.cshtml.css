@@ -11,6 +11,14 @@
     color: wheat;
 }
 
+.main_container{
+    overflow: auto;
+}
+
+    .main_container::-webkit-scrollbar {
+        display: none;
+    }
+
 .data-row {
     transition: background-color 0.2s ease-in-out;
 }
@@ -50,6 +58,6 @@
     width:20%;
 }
 
-#partialZone {
+.partialZone {
     background-color: #FED66B;
 }
