@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+@{
+    var session = HttpContextAccessor.HttpContext?.Session;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -27,6 +33,25 @@
                         </li>
                     </ul>
                 </div>
+                @if(session != null)
+                {
+                    @if (session.GetString("IsAuthenticated") == "true")
+                    {
+                        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                            <ul class="navbar-nav d-sm-inline-flex flex-grow-1 justify-content-end">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Flights" asp-action="Index">Flights History</a>
+                                </li>
+                                @if(session.GetString("IsAdmin")=="true")
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users Control Panel</a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                }
             </div>
         </nav>
     </header>

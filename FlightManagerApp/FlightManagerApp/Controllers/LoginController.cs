@@ -34,6 +34,16 @@ namespace FlightManagerApp.Controllers
                 // If the user is found, set a session variable to indicate that the user is authenticated
                 HttpContext.Session.SetString("IsAuthenticated", "true");
 
+                //Save his username so that we can print it later: Hello, {User}
+                HttpContext.Session.SetString("Username", user.Username);
+
+
+                //Check if admin and save result
+                if(user.Role == "admin")
+                {
+                    HttpContext.Session.SetString("IsAdmin", "true");
+                }
+
                 // Redirect the user to the Home/Index action
                 return RedirectToAction("Index", "Home");
             }

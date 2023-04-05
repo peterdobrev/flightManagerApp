@@ -16,7 +16,7 @@ USE [FlightManagerDB];
 GO
 
 IF OBJECT_ID('dbo.User', 'U') IS NOT NULL
-DROP TABLE dbo.Users;
+DROP TABLE dbo.[User];
 GO
 
 CREATE TABLE dbo.[User] (
@@ -32,3 +32,6 @@ CREATE TABLE dbo.[User] (
     Role NVARCHAR(50) NOT NULL
 );
 GO
+
+INSERT INTO [User] (Username, Password, Email, FirstName, LastName, EGN, Address, PhoneNumber, Role)
+VALUES ('admin', 'admin', 'admin@admin.com', 'Admin', 'Admin', '0000000000', 'Admin', '0000000000', 'admin');
