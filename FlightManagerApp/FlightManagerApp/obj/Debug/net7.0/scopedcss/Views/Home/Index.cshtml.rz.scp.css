@@ -11,15 +11,6 @@
     color: wheat;
 }
 
-table[b-u8mzjbkvyi]{
-    margin-top: 1rem;
-    color: black;
-}
-
-td[b-u8mzjbkvyi], th[b-u8mzjbkvyi]{
-    width:20%;
-}
-
 .data-row[b-u8mzjbkvyi] {
     transition: background-color 0.2s ease-in-out;
 }
@@ -28,4 +19,33 @@ td[b-u8mzjbkvyi], th[b-u8mzjbkvyi]{
         background-color: #f5f5f5;
         transition-delay: 0.2s;
         cursor: pointer;
+}
+
+.table[b-u8mzjbkvyi] {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    color: black;
+}
+
+.thead[b-u8mzjbkvyi] {
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.tbody[b-u8mzjbkvyi] {
+    display: table-row-group;
+}
+
+.tr[b-u8mzjbkvyi] {
+    display: table-row;
+    border-bottom: 1px solid black;
+}
+
+.th[b-u8mzjbkvyi],
+.td[b-u8mzjbkvyi] {
+    display: table-cell;
+    padding: 5px;
+    width:20%;
 }

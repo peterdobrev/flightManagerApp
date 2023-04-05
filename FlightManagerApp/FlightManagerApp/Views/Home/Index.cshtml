@@ -9,55 +9,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Document</title>
 </head>
 <body>  
     <div class="main_container">
     <div class="text-center">
         <h1 class="display-4">Flights</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
+            <div class="table">
+                <div class="thead">
+                    <div class="tr">
+                        <div class="th">
                             Flight
-                        </th>
-                        <th>
+                        </div>
+                        <div class="th">
                             Departure Location
-                        </th>
-                        <th>
+                        </div>
+                        <div class="th">
                             Arrival Location
-                        </th>
-                        <th>
+                        </div>
+                        <div class="th">
                             Flight Start
-                        </th>
-                        <th>
+                        </div>
+                        <div class="th">
                             Flight Duration
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
+                        </div>
+                    </div>
+                </div>
+                <div class="tbody">
                     @foreach (var item in Model)
                     {
-                        <tr class="data-row">
-                            <td>
+                        <div class="tr data-row">
+                            <div class="td">
                                 F@(item.FlightId.ToString())@(item.DepartureLocation[0])@(item.ArrivalLocation[0])
-                            </td>
-                            <td>
+                            </div>
+                            <div class="td">
                                 @Html.DisplayFor(modelItem => item.DepartureLocation)
-                            </td>
-                            <td>
+                            </div>
+                            <div class="td">
                                 @Html.DisplayFor(modelItem => item.ArrivalLocation)
-                            </td>
-                            <td>
+                            </div>
+                            <div class="td">
                                 @Html.DisplayFor(modelItem => item.DepartureDateTime)
-                            </td>
-                            <td>
+                            </div>
+                            <div class="td">
                                 @((item.ArrivalDateTime - item.DepartureDateTime).ToString(@"hh\:mm")) Hours
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
+                        <div id="partialZone">
+                            
+                        </div>
                     }
-                </tbody>
-            </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    <script>
+        let dataRows = document.querySelectorAll(".data-row");
+        $(function () {
+            dataRows.forEach((row) => {
+                row.addEventListener("click", (e) => {
+                    var flightId = 1; // Replace with the actual flight ID
+                    $.ajax({
+                        type: 'GET',
+                        url: '/Reservations/PartialCreate',
+                        data: { flightId: flightId },
+                        success: function (result) {
+                            $('#partialZone').html(result);
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(xhr.responseText);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 

@@ -58,6 +58,8 @@ namespace FlightManagerApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ReservationId,FirstName,MiddleName,LastName,Egn,Email,PhoneNumber,Nationality,TicketType,FlightId")] Reservation reservation)
         {
+            var flight = _context.Flights.FirstOrDefault(x=>x.FlightId == reservation.FlightId);
+            reservation.Flight = flight;
             if (ModelState.IsValid)
             {
                 _context.Add(reservation);
@@ -163,5 +165,43 @@ namespace FlightManagerApp.Controllers
         {
           return (_context.Reservations?.Any(e => e.ReservationId == id)).GetValueOrDefault();
         }
+
+        [HttpGet]
+        public IActionResult PartialCreate(int? flightId)
+        {
+            if (flightId == null || _context.Reservations == null)
+            {
+                return NotFound();
+            }
+
+            var flight = _context.Flights
+                .FirstOrDefault(m => m.FlightId == flightId);
+
+            if (flight == null)
+            {
+                return NotFound();
+            }
+
+            Reservation reservation = new Reservation();
+            reservation.Flight = flight;
+            reservation.FlightId = (int)flightId;
+
+            ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId", reservation.FlightId);
+            return PartialView("_FlightReservation", reservation);
+        }
+
+        [HttpPost]
+        public IActionResult PartialCreate(Reservation reservation)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(reservation);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId", reservation.FlightId);
+            return View(reservation);
+        }
+
     }
 }
