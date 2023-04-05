@@ -13,6 +13,22 @@
       "PackagePath": "staticwebassets\\css\\photos\\airplane-tail.png"
     },
     {
+      "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\man-standing-flipped.png",
+      "PackagePath": "staticwebassets\\css\\photos\\man-standing-flipped.png"
+    },
+    {
+      "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\man-standing.png",
+      "PackagePath": "staticwebassets\\css\\photos\\man-standing.png"
+    },
+    {
+      "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\woman-sitting-flipped.png",
+      "PackagePath": "staticwebassets\\css\\photos\\woman-sitting-flipped.png"
+    },
+    {
+      "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\photos\\woman-sitting.png",
+      "PackagePath": "staticwebassets\\css\\photos\\woman-sitting.png"
+    },
+    {
       "Id": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

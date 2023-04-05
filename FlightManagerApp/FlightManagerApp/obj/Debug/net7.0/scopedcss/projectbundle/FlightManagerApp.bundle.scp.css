@@ -128,3 +128,59 @@ footer .container[b-pyjl9ugnzs] {
 .navbar[b-pyjl9ugnzs], navbar-expand-sm[b-pyjl9ugnzs], navbar-toggleable-sm[b-pyjl9ugnzs], navbar-light[b-pyjl9ugnzs], mb-3[b-pyjl9ugnzs] {
     box-shadow: none;
 }
+/* _content/FlightManagerApp/Views/Users/Create.cshtml.rz.scp.css */
+.flex-container[b-uf3xqmdu5b]{
+    display:flex;
+
+    width: 100%;
+    justify-content:center;
+    gap:2rem;
+}
+
+.left[b-uf3xqmdu5b], .middle[b-uf3xqmdu5b], .right[b-uf3xqmdu5b]{
+    line-height:2rem;
+}
+
+.col-md-4[b-uf3xqmdu5b]{
+    width:100%;
+}
+
+.button-centered[b-uf3xqmdu5b]{
+    margin-top: 2rem;
+    display:flex;
+    justify-content:center;
+}
+
+.btn[b-uf3xqmdu5b]{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.img[b-uf3xqmdu5b]{
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.left[b-uf3xqmdu5b]{
+    flex:1;
+}
+
+.middle[b-uf3xqmdu5b]{
+    flex:1;
+}
+
+.right[b-uf3xqmdu5b]{
+    flex:1;
+}
+
+@media (max-width:600)
+{
+    .flex-container[b-uf3xqmdu5b]{
+        flex-direction:column;
+    }
+    .img[b-uf3xqmdu5b]{
+        visibility:collapse;
+    }
+}
