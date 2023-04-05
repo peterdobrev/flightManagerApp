@@ -9,6 +9,24 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<div class="pages">
+    <div>
+        <label for="pageSize">Show</label>
+        <select id="pageSize">
+            <option value="25" selected>25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        <label for="pageSize">results per page</label>
+    </div>
+    <div>
+        <button id="prev-page">&lt;</button>
+        <button id="next-page">&gt;</button>
+    </div>
+</div>
+
+<div id="table-wrapper">
 <table class="table">
     <thead>
         <tr>
@@ -81,3 +99,58 @@
 }
     </tbody>
 </table>
+</div>
+<div class="pages">
+    <div>
+        <button id="prev-page">&lt;</button>
+        <button id="next-page">&gt;</button>
+    </div>
+</div>
+
+<script>
+    var currentPage = 1;
+    var pageSize = 25;
+
+    function showPage(page) {
+        currentPage = page;
+
+        var start = (currentPage - 1) * pageSize;
+        var end = start + pageSize;
+        var rows = document.querySelectorAll("#table-wrapper tbody tr");
+
+        rows.forEach(function (row, index) {
+            if (index >= start && index < end) {
+                row.style.display = "table-row";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Set the initial page
+        showPage(1);
+
+        // Handle the page size dropdown
+        document.getElementById("pageSize").addEventListener("change", function () {
+            pageSize = parseInt(this.value);
+            showPage(1);
+        });
+
+        // Handle the pagination arrows
+        document.getElementById("prev-page").addEventListener("click", function () {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+        });
+
+        document.getElementById("next-page").addEventListener("click", function () {
+            var numRows = document.querySelectorAll("#table-wrapper tbody tr").length;
+            var numPages = Math.ceil(numRows / pageSize);
+
+            if (currentPage < numPages) {
+                showPage(currentPage + 1);
+            }
+        });
+    });
+</script>
