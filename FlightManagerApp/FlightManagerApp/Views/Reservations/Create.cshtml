@@ -49,7 +49,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="TicketType" class="control-label"></label>
-                <input asp-for="TicketType" class="form-control" />
+                <select asp-for="TicketType" class="form-control">
+                    <option value="Business">Business</option>
+                    <option value="Economics">Economics</option>
+                </select>
                 <span asp-validation-for="TicketType" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -80,7 +80,7 @@
                             url: '/Reservations/PartialCreate',
                             data: { flightId: flightId },
                             success: function (result) {
-                                $(partialZones[index]).html(result).show();
+                                $(partialZones[index]).hide().html(result).fadeIn("slow");
                                 isPartialZoneDisplayed = true;
                             },
                             error: function (xhr, status, error) {
@@ -88,7 +88,9 @@
                             }
                         });
                     } else {
-                        $(partialZones[index]).hide();
+                        $(partialZones[index]).fadeOut("slow", function () {
+                            $(this).html("");
+                        });
                         isPartialZoneDisplayed = false;
                     }
                 });

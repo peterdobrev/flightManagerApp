@@ -42,6 +42,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Flights" asp-action="Index">Flights History</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Reservations" asp-action="Index">Reservations History</a>
+                                </li>
                                 @if(session.GetString("IsAdmin")=="true")
                                 {
                                     <li class="nav-item">
