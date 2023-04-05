@@ -21,6 +21,15 @@ td[b-u8mzjbkvyi], th[b-u8mzjbkvyi]{
     width:25%;
 }
 
+.data-row[b-u8mzjbkvyi] {
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .data-row:hover[b-u8mzjbkvyi] {
+        background-color: #f5f5f5;
+        transition-delay: 0.2s;
+        cursor: pointer;
+    }
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
 .login-page[b-wn6j9bcgtj] {
     width: 360px;
