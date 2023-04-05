@@ -1,0 +1,22 @@
+.main_container[b-u8mzjbkvyi] {
+    background-color: #6C63FF;
+    margin: auto;
+    height: 50vh;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 50px;
+}
+
+.main_container .text-center[b-u8mzjbkvyi] {
+    padding: 1rem;
+    color: wheat;
+}
+
+table[b-u8mzjbkvyi]{
+    margin-top: 1rem;
+    color: black;
+}
+
+td[b-u8mzjbkvyi], th[b-u8mzjbkvyi]{
+    width:25%;
+}
+

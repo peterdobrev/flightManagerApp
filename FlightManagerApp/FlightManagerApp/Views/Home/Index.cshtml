@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<FlightManagerApp.Models.Flight>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 <!DOCTYPE html>
@@ -9,10 +11,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body>  
     <div class="main_container">
     <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
+        <h1 class="display-4">Flights</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Departure Location
+                        </th>
+                        <th>
+                            Arrival Location
+                        </th>
+                        <th>
+                            Flight Start
+                        </th>
+                        <th>
+                            Flight Duration
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DepartureLocation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ArrivalLocation)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DepartureDateTime)
+                            </td>
+                            <td>
+                                @((item.ArrivalDateTime - item.DepartureDateTime).ToString(@"hh\:mm")) Hours
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
     </div>
     </div>
 </body>

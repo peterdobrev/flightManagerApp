@@ -1,5 +1,6 @@
 ﻿using FlightManagerApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace FlightManagerApp.Controllers
@@ -8,14 +9,20 @@ namespace FlightManagerApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly FlightManagerDbContext _context;
+
+
+        public HomeController(ILogger<HomeController> logger, FlightManagerDbContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return _context.Flights != null ?
+                          View(_context.Flights.ToList()) :
+                          Problem("Entity set 'FlightManagerDbContext.Flights'  is null.");
         }
 
         public IActionResult Privacy()
