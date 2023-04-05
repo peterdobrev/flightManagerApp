@@ -21,7 +21,7 @@ namespace FlightManagerApp.Controllers
         public IActionResult Index()
         {
             return _context.Flights != null ?
-                          View(_context.Flights.ToList()) :
+                          View(_context.Flights.Where(x=>x.DepartureDateTime.CompareTo(DateTime.Today)>=0).ToList()) :
                           Problem("Entity set 'FlightManagerDbContext.Flights'  is null.");
         }
 
