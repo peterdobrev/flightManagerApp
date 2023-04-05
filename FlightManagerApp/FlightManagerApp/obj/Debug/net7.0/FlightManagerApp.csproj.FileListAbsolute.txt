@@ -276,3 +276,4 @@ C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\bin\
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Login\Index.cshtml.rz.scp.css
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Users\Create.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Users\Edit.cshtml.rz.scp.css
