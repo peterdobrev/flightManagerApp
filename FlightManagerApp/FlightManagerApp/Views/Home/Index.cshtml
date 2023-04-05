@@ -52,8 +52,42 @@
                     }
                 </tbody>
             </table>
+            <div id="popup-container" class="popup-container">
+                <div id="popup" class="popup">
+                    <form>
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
     </div>
     </div>
+    <script>
+                let popupContainer = document.getElementById("popup-container");
+        let popup = document.getElementById("popup");
+        let dataRows = document.querySelectorAll(".data-row");
+
+        dataRows.forEach((row) => {
+            row.addEventListener("click", (e) => {
+                popup.classList.remove("hide");
+                popup.classList.add("show");
+                popupContainer.classList.remove("hide");
+                popupContainer.classList.add("show");
+            });
+        });
+
+        popupContainer.addEventListener("click", (e) => {
+            if (e.target === popupContainer) {
+                popup.classList.remove("show");
+                popup.classList.add("hide");
+                popupContainer.classList.remove("show");
+                popupContainer.classList.add("hide");
+            }
+        });
+    </script>
 </body>
 </html>
 
