@@ -40,7 +40,7 @@
 }
 
 .tr[b-u8mzjbkvyi] {
-    display: table-row;
+    display: flex;
     border-bottom: 1px solid black;
 }
 
@@ -49,6 +49,10 @@
     display: table-cell;
     padding: 5px;
     width:20%;
+}
+
+#partialZone[b-u8mzjbkvyi] {
+    background-color: #FED66B;
 }
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
 .login-page[b-wn6j9bcgtj] {
@@ -103,6 +107,32 @@ body[b-wn6j9bcgtj] {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+/* _content/FlightManagerApp/Views/Shared/_FlightReservation.cshtml.rz.scp.css */
+.input-container[b-g6w6jqet8z]{
+    display: flex;
+}
+
+.left[b-g6w6jqet8z]{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.middle[b-g6w6jqet8z] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.right[b-g6w6jqet8z] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn[b-g6w6jqet8z]{
+    margin: 1rem;
 }
 /* _content/FlightManagerApp/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification

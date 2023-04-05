@@ -1,0 +1,25 @@
+.input-container[b-g6w6jqet8z]{
+    display: flex;
+}
+
+.left[b-g6w6jqet8z]{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.middle[b-g6w6jqet8z] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.right[b-g6w6jqet8z] {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn[b-g6w6jqet8z]{
+    margin: 1rem;
+}

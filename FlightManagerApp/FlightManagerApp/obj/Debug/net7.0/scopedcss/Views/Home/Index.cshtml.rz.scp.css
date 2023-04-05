@@ -39,7 +39,7 @@
 }
 
 .tr[b-u8mzjbkvyi] {
-    display: table-row;
+    display: flex;
     border-bottom: 1px solid black;
 }
 
@@ -48,4 +48,8 @@
     display: table-cell;
     padding: 5px;
     width:20%;
+}
+
+#partialZone[b-u8mzjbkvyi] {
+    background-color: #FED66B;
 }

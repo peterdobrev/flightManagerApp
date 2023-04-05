@@ -1,0 +1,25 @@
+﻿.input-container{
+    display: flex;
+}
+
+.left{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btn{
+    margin: 1rem;
+}
