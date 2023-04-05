@@ -83,11 +83,6 @@ public partial class FlightManagerDbContext : DbContext
             entity.Property(e => e.TicketType)
                 .HasMaxLength(20)
                 .IsUnicode(false);
-
-            entity.HasOne(d => d.Flight).WithMany(p => p.Reservations)
-                .HasForeignKey(d => d.FlightId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Reservati__Fligh__5535A963");
         });
 
         modelBuilder.Entity<User>(entity =>

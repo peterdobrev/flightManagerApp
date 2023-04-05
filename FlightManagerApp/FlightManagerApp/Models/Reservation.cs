@@ -24,6 +24,4 @@ public partial class Reservation
     public string TicketType { get; set; } = null!;
 
     public int FlightId { get; set; }
-
-    public virtual Flight Flight { get; set; } = null!;
 }

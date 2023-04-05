@@ -21,7 +21,7 @@ namespace FlightManagerApp.Controllers
         // GET: Reservations
         public async Task<IActionResult> Index()
         {
-            var flightManagerDbContext = _context.Reservations.Include(r => r.Flight);
+            var flightManagerDbContext = _context.Reservations;
             return View(await flightManagerDbContext.ToListAsync());
         }
 
@@ -34,7 +34,6 @@ namespace FlightManagerApp.Controllers
             }
 
             var reservation = await _context.Reservations
-                .Include(r => r.Flight)
                 .FirstOrDefaultAsync(m => m.ReservationId == id);
             if (reservation == null)
             {
@@ -59,7 +58,6 @@ namespace FlightManagerApp.Controllers
         public async Task<IActionResult> Create([Bind("ReservationId,FirstName,MiddleName,LastName,Egn,Email,PhoneNumber,Nationality,TicketType,FlightId")] Reservation reservation)
         {
             var flight = _context.Flights.FirstOrDefault(x=>x.FlightId == reservation.FlightId);
-            reservation.Flight = flight;
             if (ModelState.IsValid)
             {
                 _context.Add(reservation);
@@ -132,7 +130,6 @@ namespace FlightManagerApp.Controllers
             }
 
             var reservation = await _context.Reservations
-                .Include(r => r.Flight)
                 .FirstOrDefaultAsync(m => m.ReservationId == id);
             if (reservation == null)
             {
@@ -183,7 +180,6 @@ namespace FlightManagerApp.Controllers
             }
 
             Reservation reservation = new Reservation();
-            reservation.Flight = flight;
             reservation.FlightId = (int)flightId;
 
             ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId", reservation.FlightId);
