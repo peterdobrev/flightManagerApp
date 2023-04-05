@@ -1,7 +1,7 @@
 ﻿.main_container {
     background-color: #6C63FF;
     margin: auto;
-    height: 50vh;
+    height: 70vh;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     border-radius: 50px;
 }
