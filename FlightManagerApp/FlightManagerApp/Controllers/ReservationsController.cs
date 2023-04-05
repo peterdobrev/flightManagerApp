@@ -21,6 +21,10 @@ namespace FlightManagerApp.Controllers
         // GET: Reservations
         public async Task<IActionResult> Index()
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             var flightManagerDbContext = _context.Reservations;
             return View(await flightManagerDbContext.ToListAsync());
         }
@@ -28,6 +32,10 @@ namespace FlightManagerApp.Controllers
         // GET: Reservations/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Reservations == null)
             {
                 return NotFound();
@@ -46,6 +54,10 @@ namespace FlightManagerApp.Controllers
         // GET: Reservations/Create
         public IActionResult Create()
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId");
             return View();
         }
@@ -71,6 +83,10 @@ namespace FlightManagerApp.Controllers
         // GET: Reservations/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Reservations == null)
             {
                 return NotFound();
@@ -124,6 +140,10 @@ namespace FlightManagerApp.Controllers
         // GET: Reservations/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Reservations == null)
             {
                 return NotFound();

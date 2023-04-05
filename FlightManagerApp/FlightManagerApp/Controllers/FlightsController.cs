@@ -21,6 +21,10 @@ namespace FlightManagerApp.Controllers
         // GET: Flights
         public async Task<IActionResult> Index()
         {
+            if(HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
               return _context.Flights != null ? 
                           View(await _context.Flights.ToListAsync()) :
                           Problem("Entity set 'FlightManagerDbContext.Flights'  is null.");
@@ -29,6 +33,10 @@ namespace FlightManagerApp.Controllers
         // GET: Flights/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Flights == null)
             {
                 return NotFound();
@@ -69,6 +77,10 @@ namespace FlightManagerApp.Controllers
         // GET: Flights/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Flights == null)
             {
                 return NotFound();
@@ -120,6 +132,10 @@ namespace FlightManagerApp.Controllers
         // GET: Flights/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            if (HttpContext.Session.GetString("IsAuthenticated") != "true")
+            {
+                return RedirectToAction("Index", "Home");
+            }
             if (id == null || _context.Flights == null)
             {
                 return NotFound();
