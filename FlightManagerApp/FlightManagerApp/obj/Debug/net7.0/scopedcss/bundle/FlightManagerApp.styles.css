@@ -3,6 +3,17 @@
     display:flex;
     justify-content:space-between;
 }
+
+.background-wrapper[b-vgygmei1gv] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color:white;
+}
+
+tr[b-vgygmei1gv]{
+    color:white;
+}
 /* _content/FlightManagerApp/Views/Home/Index.cshtml.rz.scp.css */
 .main_container[b-u8mzjbkvyi] {
     background-color: #6C63FF;
@@ -66,6 +77,8 @@
 
 .partialZone[b-u8mzjbkvyi] {
     background-color: #FED66B;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius:25px;
 }
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
 .login-page[b-wn6j9bcgtj] {
