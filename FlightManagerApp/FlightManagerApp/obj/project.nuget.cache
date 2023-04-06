@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ScfT+d/uYmvziBmVYRLvyryGGwMg1JkaiilktIWzSkrU9dd7Ysyb3M7dPnFF69NloIXWcyuIdiFPQRg1nORuog==",
+  "dgSpecHash": "K+TgLhg0bTmvSEdn6wTIy+4CqamZc+nNRrH+NjKLTKrdsxJXGNpr1IJ0RfQLrtNL6cwGTVUV2GgN7r9MUm6S7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Petur\\Documents\\flightManagerApp\\FlightManagerApp\\FlightManagerApp\\FlightManagerApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Petur\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Petur\\.nuget\\packages\\jquery\\1.6.3\\jquery.1.6.3.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",
@@ -183,7 +184,8 @@
     "C:\\Users\\Petur\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Petur\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Petur\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Petur\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Petur\\.nuget\\packages\\toastr\\2.1.1\\toastr.2.1.1.nupkg.sha512"
   ],
   "logs": []
 }
