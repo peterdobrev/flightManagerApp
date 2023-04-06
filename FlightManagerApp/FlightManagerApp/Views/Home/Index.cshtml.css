@@ -120,6 +120,7 @@ svg {
     background: transparent;
     transition: border-color 0.2s;
     text-align: center;
+    border-bottom: 1px solid wheat;
 }
 
     .form__field::placeholder {

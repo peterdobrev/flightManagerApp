@@ -137,6 +137,7 @@ svg[b-u8mzjbkvyi] {
     background: transparent;
     transition: border-color 0.2s;
     text-align: center;
+    border-bottom: 1px solid wheat;
 }
 
     .form__field[b-u8mzjbkvyi]::placeholder {
