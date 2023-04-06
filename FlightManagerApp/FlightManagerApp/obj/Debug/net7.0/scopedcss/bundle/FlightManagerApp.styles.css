@@ -80,6 +80,35 @@ tr[b-vgygmei1gv]{
     border-bottom-right-radius: 25px;
     border-bottom-left-radius:25px;
 }
+
+.planePath[b-u8mzjbkvyi] {
+    stroke: #D9DADA;
+    stroke-width: .1%;
+    stroke-width: .5%;
+    stroke-dasharray: 1% 2%;
+    stroke-linecap: round;
+    fill: none;
+}
+
+.fil1[b-u8mzjbkvyi] {
+    fill: #D9DADA;
+}
+
+.fil2[b-u8mzjbkvyi] {
+    fill: #C5C6C6;
+}
+
+.fil4[b-u8mzjbkvyi] {
+    fill: #9D9E9E;
+}
+
+.fil3[b-u8mzjbkvyi] {
+    fill: #AEAFB0;
+}
+
+svg[b-u8mzjbkvyi] {
+    height: 10vh; /* adjust this value to fit your footer */
+}
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
 .login-page[b-wn6j9bcgtj] {
     width: 360px;
@@ -139,10 +168,23 @@ body[b-wn6j9bcgtj] {
     display: flex;
     justify-content: space-between;
 }
+
+.background-wrapper[b-w81o5co1wu]
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+tr[b-w81o5co1wu] {
+    color: white;
+}
+}
 /* _content/FlightManagerApp/Views/Shared/_FlightReservation.cshtml.rz.scp.css */
 .input-container[b-g6w6jqet8z]{
-    display: flex;
-    border-radius: 50px;
+    display: flex !important;
+
 }
 
 .left[b-g6w6jqet8z]{
@@ -220,12 +262,12 @@ button.accept-policy[b-pyjl9ugnzs] {
   position: absolute;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
   line-height: 60px;
 }
 
-footer .container[b-pyjl9ugnzs] {
-    color: black;
+footer div[b-pyjl9ugnzs]{
+    color: white;
+    padding-left: 2rem;
 }
 
 .container-fluid[b-pyjl9ugnzs] {
@@ -241,6 +283,7 @@ footer .container[b-pyjl9ugnzs] {
 .navbar[b-pyjl9ugnzs], navbar-expand-sm[b-pyjl9ugnzs], navbar-toggleable-sm[b-pyjl9ugnzs], navbar-light[b-pyjl9ugnzs], mb-3[b-pyjl9ugnzs] {
     box-shadow: none;
 }
+
 /* _content/FlightManagerApp/Views/Users/Create.cshtml.rz.scp.css */
 .flex-container[b-uf3xqmdu5b]{
     display:flex;
@@ -356,4 +399,15 @@ footer .container[b-pyjl9ugnzs] {
 .pages[b-wvzo3xyxkd] {
     display: flex;
     justify-content: space-between;
+}
+
+.background-wrapper[b-wvzo3xyxkd] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+tr[b-wvzo3xyxkd] {
+    color: white;
 }

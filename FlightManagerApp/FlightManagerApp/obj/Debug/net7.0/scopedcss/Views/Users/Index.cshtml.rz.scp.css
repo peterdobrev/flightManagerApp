@@ -2,3 +2,14 @@
     display: flex;
     justify-content: space-between;
 }
+
+.background-wrapper[b-wvzo3xyxkd] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+tr[b-wvzo3xyxkd] {
+    color: white;
+}

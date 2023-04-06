@@ -51,12 +51,12 @@ button.accept-policy {
   position: absolute;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
   line-height: 60px;
 }
 
-footer .container {
-    color: black;
+footer div{
+    color: white;
+    padding-left: 2rem;
 }
 
 .container-fluid {
@@ -72,3 +72,4 @@ footer .container {
 .navbar, navbar-expand-sm, navbar-toggleable-sm, navbar-light, mb-3 {
     box-shadow: none;
 }
+

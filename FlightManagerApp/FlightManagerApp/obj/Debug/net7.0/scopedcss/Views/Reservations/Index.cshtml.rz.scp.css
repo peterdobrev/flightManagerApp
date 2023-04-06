@@ -2,3 +2,16 @@
     display: flex;
     justify-content: space-between;
 }
+
+.background-wrapper[b-w81o5co1wu]
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+
+tr[b-w81o5co1wu] {
+    color: white;
+}
+}

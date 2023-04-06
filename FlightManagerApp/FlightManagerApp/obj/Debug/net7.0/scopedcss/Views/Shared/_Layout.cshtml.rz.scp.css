@@ -51,12 +51,12 @@ button.accept-policy[b-pyjl9ugnzs] {
   position: absolute;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
   line-height: 60px;
 }
 
-footer .container[b-pyjl9ugnzs] {
-    color: black;
+footer div[b-pyjl9ugnzs]{
+    color: white;
+    padding-left: 2rem;
 }
 
 .container-fluid[b-pyjl9ugnzs] {
@@ -72,3 +72,4 @@ footer .container[b-pyjl9ugnzs] {
 .navbar[b-pyjl9ugnzs], navbar-expand-sm[b-pyjl9ugnzs], navbar-toggleable-sm[b-pyjl9ugnzs], navbar-light[b-pyjl9ugnzs], mb-3[b-pyjl9ugnzs] {
     box-shadow: none;
 }
+

@@ -1,6 +1,6 @@
 ﻿.input-container{
-    display: flex;
-    border-radius: 50px;
+    display: flex !important;
+
 }
 
 .left{
