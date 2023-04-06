@@ -213,10 +213,10 @@ namespace FlightManagerApp.Controllers
             {
                 _context.Add(reservation);
                 _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true });
             }
             ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId", reservation.FlightId);
-            return View(reservation);
+            return View("Create",reservation);
         }
 
     }
