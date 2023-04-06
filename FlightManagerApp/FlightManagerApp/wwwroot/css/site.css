@@ -21,3 +21,42 @@ body {
     margin-bottom: 60px;
     background: #CDC1FF;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/771792826034815006/1093482353965404160/paperairplanes_background.png');
+    background-size: cover;
+    -webkit-animation: slidein 100s;
+    animation: slidein 100s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: top;
+        background-size: 3000px;
+    }
+
+    to {
+        background-position: -100px 0px;
+        background-size: 2750px;
+    }
+}
