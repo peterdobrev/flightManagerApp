@@ -30,6 +30,12 @@
                     <mpath xlink:href="#planePath" />
                 </animateMotion>
             </svg>
+            <div class="form__group field">
+                <div>
+                <input type="text" class="form__field" placeholder="Name" name="name" id='name' required />
+                <label for="name" class="form__label">Search</label>
+                </div>
+            </div>
             <div class="table">
                 <div class="thead">
                     <div class="tr">
@@ -109,6 +115,42 @@
                     }
                 });
             });
+        });
+
+        function searchTable() {
+            // Declare variables
+            var input, filter, table, rows, cells, flightId, departure, arrival, start, duration, i, j, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementsByClassName("table")[0];
+            rows = table.getElementsByClassName("data-row");
+
+            // Loop through all table rows, and hide those that don't match the search query
+            for (i = 0; i < rows.length; i++) {
+                cells = rows[i].getElementsByClassName("td");
+                flightId = cells[0].textContent || cells[0].innerText;
+                departure = cells[1].textContent || cells[1].innerText;
+                arrival = cells[2].textContent || cells[2].innerText;
+                start = cells[3].textContent || cells[3].innerText;
+                duration = cells[4].textContent || cells[4].innerText;
+                txtValue = flightId + departure + arrival + start + duration;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+
+        const input = document.querySelector('.form__field');
+        input.addEventListener('input', () => {
+            const value = input.value;
+            const cursorPosition = input.selectionStart;
+            const length = value.length;
+            const midpoint = Math.floor(length / 2);
+            const offset = (cursorPosition - midpoint) * 100 / input.clientWidth;
+            const initialIndent = (input.offsetWidth - input.clientWidth) / 2;
+            input.style.textIndent = `${initialIndent + offset}%`;
         });
     </script>
 </body>

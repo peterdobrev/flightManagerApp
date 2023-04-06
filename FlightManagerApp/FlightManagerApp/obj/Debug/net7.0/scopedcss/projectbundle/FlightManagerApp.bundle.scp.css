@@ -109,6 +109,77 @@ tr[b-vgygmei1gv]{
 svg[b-u8mzjbkvyi] {
     height: 10vh; /* adjust this value to fit your footer */
 }
+
+:root[b-u8mzjbkvyi] {
+    --primary: #11998e;
+    --secondary: #38ef7d;
+    --white: #fff;
+    --gray: #9b9b9b;
+}
+
+.form__group[b-u8mzjbkvyi] {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    margin:auto;
+    width: 20%;
+}
+
+.form__field[b-u8mzjbkvyi] {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    text-align: center;
+}
+
+    .form__field[b-u8mzjbkvyi]::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown ~ .form__label[b-u8mzjbkvyi] {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+
+.form__label[b-u8mzjbkvyi] {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--gray);
+    width:100%;
+}
+
+.form__field:focus ~ .form__label[b-u8mzjbkvyi] {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--primary);
+    text-align:center;
+}
+
+.form__field:focus[b-u8mzjbkvyi] {
+    padding-bottom: 6px;
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--primary), var(--secondary));
+    border-image-slice: 1;
+}
+
+.form__field:required[b-u8mzjbkvyi],
+.form__field:invalid[b-u8mzjbkvyi] {
+    box-shadow: none;
+}
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
 .login-page[b-wn6j9bcgtj] {
     width: 360px;
