@@ -52,3 +52,10 @@
         visibility: collapse;
     }
 }
+
+.background-wrapper[b-mdss1rgzld] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}

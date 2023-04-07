@@ -281,3 +281,13 @@ C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Flights\Index.cshtml.rz.scp.css
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Index.cshtml.rz.scp.css
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Users\Index.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Users\Delete.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Users\Details.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Flights\Create.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Flights\Delete.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Flights\Details.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Flights\Edit.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Create.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Delete.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Details.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Edit.cshtml.rz.scp.css

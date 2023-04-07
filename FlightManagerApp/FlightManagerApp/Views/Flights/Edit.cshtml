@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Edit";
 }
+<div class="background-wrapper">
 
 <h1>Edit</h1>
 
@@ -68,7 +69,7 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-
+</div>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

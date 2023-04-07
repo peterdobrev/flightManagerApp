@@ -1,3 +1,35 @@
+/* _content/FlightManagerApp/Views/Flights/Create.cshtml.rz.scp.css */
+
+.background-wrapper[b-ceapmp60n4] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Flights/Delete.cshtml.rz.scp.css */
+
+.background-wrapper[b-rn8f3y16cx] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Flights/Details.cshtml.rz.scp.css */
+
+.background-wrapper[b-ay24p9eytk] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Flights/Edit.cshtml.rz.scp.css */
+
+.background-wrapper[b-eozbgvgm77] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
 /* _content/FlightManagerApp/Views/Flights/Index.cshtml.rz.scp.css */
 .pages[b-vgygmei1gv]{
     display:flex;
@@ -235,6 +267,34 @@ body[b-wn6j9bcgtj] {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+/* _content/FlightManagerApp/Views/Reservations/Create.cshtml.rz.scp.css */
+.background-wrapper[b-0634wgld5s] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Reservations/Delete.cshtml.rz.scp.css */
+.background-wrapper[b-dbfsl447od] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Reservations/Details.cshtml.rz.scp.css */
+.background-wrapper[b-e5lzlezp91] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Reservations/Edit.cshtml.rz.scp.css */
+.background-wrapper[b-dlirnwjhm9] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
 /* _content/FlightManagerApp/Views/Reservations/Index.cshtml.rz.scp.css */
 .pages[b-w81o5co1wu] {
     display: flex;
@@ -412,6 +472,26 @@ footer div[b-pyjl9ugnzs]{
         visibility:collapse;
     }
 }
+.background-wrapper[b-uf3xqmdu5b] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Users/Delete.cshtml.rz.scp.css */
+.background-wrapper[b-m8cozqksbh] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
+/* _content/FlightManagerApp/Views/Users/Details.cshtml.rz.scp.css */
+.background-wrapper[b-oq6tsyadhy] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
+}
 /* _content/FlightManagerApp/Views/Users/Edit.cshtml.rz.scp.css */
 .flex-container[b-mdss1rgzld] {
     display: flex;
@@ -466,6 +546,13 @@ footer div[b-pyjl9ugnzs]{
     .img[b-mdss1rgzld] {
         visibility: collapse;
     }
+}
+
+.background-wrapper[b-mdss1rgzld] {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 2rem;
+    color: white;
 }
 /* _content/FlightManagerApp/Views/Users/Index.cshtml.rz.scp.css */
 .pages[b-wvzo3xyxkd] {
