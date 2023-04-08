@@ -1,0 +1,47 @@
+﻿@model List<PassengerModel>
+
+<h2>Add Passengers</h2>
+
+@using (Html.BeginForm("MakeReservation", "Reservations", FormMethod.Post))
+{
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <h4>Passenger @i</h4>
+        <div>
+            @Html.LabelFor(m => m[i].FirstName)
+            @Html.TextBoxFor(m => m[i].FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m[i].MiddleName)
+            @Html.TextBoxFor(m => m[i].MiddleName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m[i].LastName)
+            @Html.TextBoxFor(m => m[i].LastName)
+        </div>
+        <div>
+            @Html.LabelFor(m => m[i].Egn)
+            @Html.TextBoxFor(m => m[i].Egn)
+        </div>
+        <div>
+            @Html.LabelFor(m => m[i].TelephoneNumber)
+            @Html.TextBoxFor(m => m[i].TelephoneNumber)
+        </div>
+        <div>
+            @Html.LabelFor(m => m[i].Nationality)
+            @Html.TextBoxFor(m => m[i].Nationality)
+        </div>
+        <div>
+            @Html.LabelFor(m => m[i].TicketType)
+            @Html.TextBoxFor(m => m[i].TicketType)
+        </div>
+        <div>
+            @Html.HiddenFor(m => m[i].FlightId)
+        </div>
+        <div>
+            @Html.HiddenFor(m => m[i].Email)
+        </div>
+    }
+
+    <button type="submit">Add Passengers</button>
+}
