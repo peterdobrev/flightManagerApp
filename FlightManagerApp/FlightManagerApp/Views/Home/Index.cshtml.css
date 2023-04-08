@@ -167,7 +167,3 @@ svg {
 .form__field:invalid {
     box-shadow: none;
 }
-
-.big-container{
-    height:1000px;
-}

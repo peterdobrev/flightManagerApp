@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlightManagerApp.Models;
+using System.Net.Mail;
+using System.Net;
 
 namespace FlightManagerApp.Controllers
 {
@@ -194,17 +196,43 @@ namespace FlightManagerApp.Controllers
         [HttpPost]
         public IActionResult DisplayPassengerForms(PassengerChooserModel model)
         {
-            List<PassengerModel> passengers = new List<PassengerModel>();
-            for (int i = 0; i < model.Count; i++)
-            {
-                passengers.Add(new PassengerModel() { FlightId = model.FlightId, Email = model.Email });;
+            if(ModelState.IsValid) {
+                List<PassengerModel> passengers = new List<PassengerModel>();
+                for (int i = 0; i < model.Count; i++)
+                {
+                    passengers.Add(new PassengerModel() { FlightId = model.FlightId, Email = model.Email }); ;
+                }
+                return PartialView("_PassengersForm", passengers);
             }
-            return PartialView("_PassengersForm", passengers);
+            else
+            {
+                return Json(ModelState);
+            }
+        }
+
+        private void SendEmailConfirmation(List<PassengerModel> passengers)
+        {
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential("your_email@example.com", "your_password");
+
+            // Create a MailMessage object
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress("your_email@example.com");
+            message.To.Add("recipient@example.com");
+            message.Subject = "Test email";
+            message.Body = "This is a test email sent from C#.";
+
         }
 
         [HttpPost]
         public IActionResult MakeReservation(List<PassengerModel> passengers)
         {
+            foreach (var passenger in passengers)
+            {
+                if (ModelState.IsValid) continue;
+                else return Json(ModelState);
+            }
             foreach (var passenger in passengers)
             {
                 Reservation reservation = new Reservation()
@@ -220,8 +248,17 @@ namespace FlightManagerApp.Controllers
                     PhoneNumber = passenger.TelephoneNumber
                 };
                 _context.Reservations.Add(reservation);
+                if(passenger.TicketType == "Business")
+
+                    _context.Flights.FirstOrDefault(x=>x.FlightId == passenger.FlightId).BusinessClassCapacity -=1;
+                else
+                {
+                    _context.Flights.FirstOrDefault(x => x.FlightId == passenger.FlightId).PassengerCapacity -= 1;
+                }
+                
             }
             _context.SaveChanges();
+            SendEmailConfirmation(passengers);
             return RedirectToAction("Index");
         }
     }
