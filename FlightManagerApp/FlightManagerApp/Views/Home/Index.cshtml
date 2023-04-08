@@ -43,10 +43,10 @@
                             Flight
                         </div>
                         <div class="th">
-                            Departure Location
+                            Route
                         </div>
                         <div class="th">
-                            Arrival Location
+                            Seats
                         </div>
                         <div class="th">
                             Flight Start
@@ -64,10 +64,10 @@
                                 F@(item.FlightId.ToString())@(item.DepartureLocation[0])@(item.ArrivalLocation[0])
                             </div>
                             <div class="td">
-                                @Html.DisplayFor(modelItem => item.DepartureLocation)
+                                 @Html.DisplayFor(modelItem => item.DepartureLocation) - @Html.DisplayFor(modelItem => item.ArrivalLocation)
                             </div>
                             <div class="td">
-                                @Html.DisplayFor(modelItem => item.ArrivalLocation)
+                                @Html.DisplayFor(modelItem => item.PassengerCapacity) (@Html.DisplayFor(modelItem => item.BusinessClassCapacity) business class)
                             </div>
                             <div class="td">
                                 @Html.DisplayFor(modelItem => item.DepartureDateTime)
@@ -94,10 +94,11 @@
             dataRows.forEach((row, index) => {
                 row.addEventListener("click", (e) => {
                     if (!isPartialZoneDisplayed) {
-                        var flightId = 1; // Replace with the actual flight ID
+                        var flightId = row.querySelector('div:first-child').textContent.trim().slice(1,-2);
+                        console.log(flightId);
                         $.ajax({
                             type: 'GET',
-                            url: '/Reservations/PartialCreate',
+                            url: '/Reservations/ChoosePassengers',
                             data: { flightId: flightId },
                             success: function (result) {
                                 $(partialZones[index]).hide().html(result).fadeIn("slow");

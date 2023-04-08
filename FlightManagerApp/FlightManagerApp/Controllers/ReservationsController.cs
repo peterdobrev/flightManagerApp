@@ -184,40 +184,45 @@ namespace FlightManagerApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult PartialCreate(int? flightId)
+        public IActionResult ChoosePassengers(int? flightId)
         {
-            if (flightId == null || _context.Reservations == null)
-            {
-                return NotFound();
-            }
-
-            var flight = _context.Flights
-                .FirstOrDefault(m => m.FlightId == flightId);
-
-            if (flight == null)
-            {
-                return NotFound();
-            }
-
-            Reservation reservation = new Reservation();
-            reservation.FlightId = (int)flightId;
-
-            ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId", reservation.FlightId);
-            return PartialView("_FlightReservation", reservation);
+            PassengerChooserModel model = new();
+            model.FlightId = (int)flightId;
+            return View("_PassengerChooser", model);
         }
 
         [HttpPost]
-        public IActionResult PartialCreate(Reservation reservation)
+        public IActionResult DisplayPassengerForms(PassengerChooserModel model)
         {
-            if (ModelState.IsValid)
+            List<PassengerModel> passengers = new List<PassengerModel>();
+            for (int i = 0; i < model.Count; i++)
             {
-                _context.Add(reservation);
-                _context.SaveChanges();
-                return Json(new { success = true });
+                passengers.Add(new PassengerModel() { FlightId = model.FlightId, Email = model.Email });;
             }
-            ViewData["FlightId"] = new SelectList(_context.Flights, "FlightId", "FlightId", reservation.FlightId);
-            return View("Create",reservation);
+            return PartialView("_PassengersForm", passengers);
         }
 
+        [HttpPost]
+        public IActionResult MakeReservation(List<PassengerModel> passengers)
+        {
+            foreach (var passenger in passengers)
+            {
+                Reservation reservation = new Reservation()
+                {
+                    Email = passenger.Email,
+                    FlightId = passenger.FlightId,
+                    FirstName = passenger.FirstName,
+                    LastName = passenger.LastName,
+                    MiddleName = passenger.MiddleName,
+                    Egn = passenger.Egn,
+                    TicketType = passenger.TicketType,
+                    Nationality = passenger.Nationality,
+                    PhoneNumber = passenger.TelephoneNumber
+                };
+                _context.Reservations.Add(reservation);
+            }
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
