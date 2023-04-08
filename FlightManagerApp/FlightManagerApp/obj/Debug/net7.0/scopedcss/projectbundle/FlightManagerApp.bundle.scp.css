@@ -110,7 +110,10 @@ tr[b-vgygmei1gv]{
 .partialZone[b-u8mzjbkvyi] {
     background-color: #FED66B;
     border-bottom-right-radius: 25px;
-    border-bottom-left-radius:25px;
+    border-bottom-left-radius: 25px;
+    -webkit-box-shadow: -1px 11px 77px -25px rgba(255,255,255,1);
+    -moz-box-shadow: -1px 11px 77px -25px rgba(255,255,255,1);
+    box-shadow: -1px 11px 77px -25px rgba(255,255,255,1);
 }
 
 .planePath[b-u8mzjbkvyi] {
@@ -212,6 +215,10 @@ svg[b-u8mzjbkvyi] {
 .form__field:required[b-u8mzjbkvyi],
 .form__field:invalid[b-u8mzjbkvyi] {
     box-shadow: none;
+}
+
+.big-container[b-u8mzjbkvyi]{
+    height:1000px;
 }
 /* _content/FlightManagerApp/Views/Login/Index.cshtml.rz.scp.css */
 .login-page[b-wn6j9bcgtj] {
@@ -416,6 +423,136 @@ footer div[b-pyjl9ugnzs]{
     box-shadow: none;
 }
 
+/* _content/FlightManagerApp/Views/Shared/_PassengerChooser.cshtml.rz.scp.css */
+.form-flex[b-ovzstzjf6c]{
+    display:flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.purple-button[b-ovzstzjf6c] {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin: 1rem;
+}
+
+    .purple-button:focus[b-ovzstzjf6c] {
+        box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    }
+
+purple-button:hover[b-ovzstzjf6c] {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .purple-button[b-ovzstzjf6c] {
+        padding: 0 2.6rem;
+    }
+}
+/* _content/FlightManagerApp/Views/Shared/_PassengersForm.cshtml.rz.scp.css */
+.passenger-box div[b-a8x6azhsl4]{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    justify-content:space-evenly;
+    margin-bottom: 1rem;
+    
+}
+
+.passenger-box[b-a8x6azhsl4] {
+    display: flex;
+    width: 30%;
+}
+
+.passenger-forms[b-a8x6azhsl4]{
+    padding: 2rem;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.background-wrapper[b-a8x6azhsl4] {
+    background-color: rgb(0,0,0,0.2);
+    border-radius: 25px;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 47px -16px rgba(250,255,107,1);
+    -moz-box-shadow: 0px 0px 47px -16px rgba(250,255,107,1);
+    box-shadow: 0px 0px 47px -16px rgba(250,255,107,1);
+}
+
+.purple-button[b-a8x6azhsl4] {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin: 1rem;
+}
+
+.purple-button:focus[b-a8x6azhsl4] {
+   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+purple-button:hover[b-a8x6azhsl4] {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .purple-button[b-a8x6azhsl4] {
+        padding: 0 2.6rem;
+    }
+}
 /* _content/FlightManagerApp/Views/Users/Create.cshtml.rz.scp.css */
 .flex-container[b-uf3xqmdu5b]{
     display:flex;

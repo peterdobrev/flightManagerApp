@@ -291,3 +291,5 @@ C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Delete.cshtml.rz.scp.css
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Details.cshtml.rz.scp.css
 C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Reservations\Edit.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Shared\_PassengerChooser.cshtml.rz.scp.css
+C:\Users\Petur\Documents\flightManagerApp\FlightManagerApp\FlightManagerApp\obj\Debug\net7.0\scopedcss\Views\Shared\_PassengersForm.cshtml.rz.scp.css

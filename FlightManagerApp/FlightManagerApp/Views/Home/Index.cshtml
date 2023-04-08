@@ -13,6 +13,8 @@
     <title>Document</title>
 </head>
 <body>  
+
+    <div class="big-container"></div>
     <div class="main_container">
     <div class="text-center">
 
@@ -76,7 +78,7 @@
                                 @((item.ArrivalDateTime - item.DepartureDateTime).ToString(@"hh\:mm")) Hours
                             </div>
                         </div>
-                            <div class="partialZone">
+                            <div class="partialZone" id="gradient">
                                 
                             </div>
                     }
@@ -153,6 +155,7 @@
             const initialIndent = (input.offsetWidth - input.clientWidth) / 2;
             input.style.textIndent = `${initialIndent + offset}%`;
         });
+
     </script>
 </body>
 </html>

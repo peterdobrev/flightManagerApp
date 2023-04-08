@@ -4,6 +4,7 @@
 }
 
 <form asp-action="DisplayPassengerForms" asp-controller="Reservations" method="post">
+    <div class="form-flex">
     <div class="form-group">
         <label asp-for="Count">Number of Passengers:</label>
         <input asp-for="Count" class="form-control" />
@@ -21,8 +22,8 @@
         <input asp-for="FlightId" class="form-control" readonly="readonly" />
         <span asp-validation-for="FlightId" class="text-danger"></span>
     </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <button type="submit" class="purple-button">Book</button>
 </form>
 
 <div id="passenger-list">
@@ -38,7 +39,7 @@
                 type: 'POST',
                 data: $(this).serialize(),
                 success: function (result) {
-                    $('#passenger-list').html(result);
+                    $('#passenger-list').html(result).fadeIn("slow");
                 }
             });
         });

@@ -1,47 +1,41 @@
 ﻿@model List<PassengerModel>
 
-<h2>Add Passengers</h2>
 
 @using (Html.BeginForm("MakeReservation", "Reservations", FormMethod.Post))
 {
+    <div class="background-wrapper">
+    <h2>Add Passengers</h2>
+    <div class="passenger-forms">
     @for (int i = 0; i < Model.Count; i++)
     {
-        <h4>Passenger @i</h4>
-        <div>
-            @Html.LabelFor(m => m[i].FirstName)
-            @Html.TextBoxFor(m => m[i].FirstName)
-        </div>
-        <div>
-            @Html.LabelFor(m => m[i].MiddleName)
-            @Html.TextBoxFor(m => m[i].MiddleName)
-        </div>
-        <div>
-            @Html.LabelFor(m => m[i].LastName)
-            @Html.TextBoxFor(m => m[i].LastName)
-        </div>
-        <div>
-            @Html.LabelFor(m => m[i].Egn)
-            @Html.TextBoxFor(m => m[i].Egn)
-        </div>
-        <div>
-            @Html.LabelFor(m => m[i].TelephoneNumber)
-            @Html.TextBoxFor(m => m[i].TelephoneNumber)
-        </div>
-        <div>
-            @Html.LabelFor(m => m[i].Nationality)
-            @Html.TextBoxFor(m => m[i].Nationality)
-        </div>
-        <div>
-            @Html.LabelFor(m => m[i].TicketType)
-            @Html.TextBoxFor(m => m[i].TicketType)
-        </div>
-        <div>
-            @Html.HiddenFor(m => m[i].FlightId)
-        </div>
-        <div>
-            @Html.HiddenFor(m => m[i].Email)
-        </div>
+        <div class="passenger-form">
+        <h4>Passenger @(i + 1)</h4>
+        <div class="passenger-box">
+            <div>
+                @Html.LabelFor(m => m[i].FirstName)
+                @Html.LabelFor(m => m[i].LastName)
+                @Html.LabelFor(m => m[i].MiddleName)
+                @Html.LabelFor(m => m[i].Egn)
+                @Html.LabelFor(m => m[i].TelephoneNumber)
+                @Html.LabelFor(m => m[i].Nationality)
+                @Html.LabelFor(m => m[i].TicketType)
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m[i].FirstName)
+                @Html.TextBoxFor(m => m[i].LastName)
+                @Html.TextBoxFor(m => m[i].MiddleName)
+                @Html.TextBoxFor(m => m[i].Egn)
+                @Html.TextBoxFor(m => m[i].TelephoneNumber)
+                @Html.TextBoxFor(m => m[i].Nationality)
+                @Html.TextBoxFor(m => m[i].TicketType)
+                @Html.HiddenFor(m => m[i].FlightId)
+                @Html.HiddenFor(m => m[i].Email)
+            </div>
+            </div>
+            </div>
     }
 
-    <button type="submit">Add Passengers</button>
+    </div>
+    <button type="submit" class="purple-button">Add Passengers</button>
+    </div>
 }
